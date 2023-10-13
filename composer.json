@@ -1,0 +1,15 @@
+{
+    "name": "lukasz7221/reindexer",
+    "autoload": {
+        "psr-4": {
+            "Reindexer\\Core\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Łukasz Surdy",
+            "email": "lukasz.surdy@sky-shop.pl"
+        }
+    ],
+    "require": {}
+}
