@@ -11,9 +11,4 @@ class Row
         $this->id = $id;
         $this->compareValue = $compareValue;
     }
-
-    public function compare(Row $row): bool
-    {
-        return $row->compareValue === $this->compareValue;
-    }
 }

@@ -29,6 +29,9 @@ class Processor
 
         $reindexRow = [];
         foreach ($newDataCollection->getAll() as $newData) {
+            if (empty($newData->id) || empty($newData->compareValue)) {
+                continue;
+            }
             $oldData = $oldDataTmp[$newData->compareValue] ?? null;
             if ($oldData) {
                 $reindexRow[] = new ReIndexRow($oldData->id, $newData->id);
@@ -41,7 +44,10 @@ class Processor
     {
         $dataTmp = [];
         foreach ($rowCollection->getAll() as $data) {
-            $dataTmp[$data->compareValue]= $data;
+            if (empty($data->compareValue) || empty($data->id)) {
+                continue;
+            }
+            $dataTmp[$data->compareValue] = $data;
         }
         return $dataTmp;
     }
