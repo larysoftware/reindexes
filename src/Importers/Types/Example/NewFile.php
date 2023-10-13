@@ -1,6 +1,6 @@
 <?php
 
-namespace Reindexer\Core\Importers\Types\GiftWorld;
+namespace Reindexer\Core\Importers\Types\Example;
 
 use Reindexer\Core\Importers\Row;
 use Reindexer\Core\Importers\RowCollection;
@@ -17,8 +17,6 @@ class NewFile extends XmlImporter
             $id = (string)$product->attributes()->id;
             $arrayRow[] = new Row($id, $ean);
         }
-
-
         return new RowCollection(...$arrayRow);
     }
 }
