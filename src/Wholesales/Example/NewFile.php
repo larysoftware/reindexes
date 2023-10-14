@@ -1,6 +1,6 @@
 <?php
 
-namespace Reindexer\Core\Importers\Types\Example;
+namespace Reindexer\Core\Wholesales\Example;
 
 use Reindexer\Core\Importers\Row;
 use Reindexer\Core\Importers\RowCollection;

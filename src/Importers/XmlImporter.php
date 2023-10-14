@@ -2,6 +2,7 @@
 
 namespace Reindexer\Core\Importers;
 
+use Reindexer\Core\Importers\Exceptions\FileNotExist;
 use Reindexer\Core\Legacy\SimpleXMLElementExtended;
 
 abstract class XmlImporter implements ImporterInterface
@@ -10,6 +11,9 @@ abstract class XmlImporter implements ImporterInterface
 
     public function __construct(string $file)
     {
+        if (!file_exists($file)) {
+            throw new FileNotExist($file);
+        }
         $this->file = $file;
     }
 

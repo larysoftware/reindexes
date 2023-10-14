@@ -11,12 +11,6 @@ class RowCollection
         $this->collections = $row;
     }
 
-    public function appendRow(Row $row): self
-    {
-        $this->collections [] = $row;
-        return $this;
-    }
-
     public function getAll(): array
     {
         return $this->collections;

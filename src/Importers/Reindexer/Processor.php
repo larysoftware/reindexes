@@ -3,7 +3,6 @@
 namespace Reindexer\Core\Importers\Reindexer;
 
 use Reindexer\Core\Importers\ImporterInterface;
-use Reindexer\Core\Importers\Row;
 use Reindexer\Core\Importers\RowCollection;
 
 class Processor
